@@ -13,7 +13,6 @@ def top_trends_html():
     # import timestamp
     with open("data/timestamp.txt", "r", encoding='utf-8') as file:
         timestamp = file.read()
-        print(timestamp)
 
     # Create HTML body
     html = f"""

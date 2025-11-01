@@ -53,7 +53,7 @@ def read_trends(xpath_params=XPATH_PARAMS):
     with open('data/scrapping_output.pickle', 'rb') as file:
         scrapping_output = pickle.load(file)
 
-    print(scrapping_output['timestamp'])
+    print(f'Data has been pulled {scrapping_output['timestamp'][0]}')
 
     # reshape data into a dataframe
     headers = ['Keywords', 'Search Volume', 'Trend Indicator', 'Increase %', 'Started', 'Status', 'Duration']
@@ -65,18 +65,10 @@ def read_trends(xpath_params=XPATH_PARAMS):
         data.append(row)
 
     df = pd.DataFrame(data, columns=headers)
-
     df.to_csv('data/trends_table.csv', index=False, encoding='utf-8-sig')
-    # df = pd.read_csv('data/trends_table.csv', encoding='utf-8-sig')
-    # df.to_parquet('data/trends_table.parquet')
-
-    # return print(df)
 
 
 if __name__ == "__main__":
     read_trends()
-    # df = pd.read_csv('data/trends_table.csv', encoding='utf-8-sig')
-    # df = pd.read_csv('data/trends_table.csv', encoding='shift_jis')
-    # print(df)
 
     
