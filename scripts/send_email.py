@@ -8,10 +8,10 @@ from dotenv import load_dotenv
 
 def top_trends_html():
 
-    df = pd.read_csv('data/trends_table.csv')
+    df = pd.read_csv('data/trends_table.csv', encoding='utf-8-sig')
     html_table = df.to_html(index=False).replace("arrow_upward", "&#x2191;").replace("arrow_downward", "&#x2193;")
     # import timestamp
-    with open("data/timestamp.txt", "r") as file:
+    with open("data/timestamp.txt", "r", encoding='utf-8') as file:
         timestamp = file.read()
         print(timestamp)
 
@@ -20,6 +20,7 @@ def top_trends_html():
     <html>
     <body>
         <p>Good morning!,<br><br>
+
         I hope you had a restful night. Below is a summary of key U.S. economic topics trending on Google over the last 24 hours, sourced from Google Trends.
         </p>
         {timestamp}<br>
@@ -30,7 +31,6 @@ def top_trends_html():
         <li>"Trending" indicates ongoing search interest; "Peaked" indicates the topic surged but has since declined.</li><br>
         <li>Data reflects U.S. market activity while you were sleeping in Singapore.</li>
         </ul>
-        &uarr;
     </body>
     </html>
     """
