@@ -1,5 +1,7 @@
 # Data folder - contains generated/scraped data
-# data/
+# Ignore all files in data/ except .gitkeep to preserve folder structure
+data/*
+!data/.gitkeep
 
 # Byte-compiled / optimized / DLL files
 __pycache__/
