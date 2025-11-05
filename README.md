@@ -1,25 +1,59 @@
 # WYAS (While You Are Sleeping) — Global Economy Trends Morning Update
 
-## Summary
-**WYAS** automatically collects recent Google Trends topics, summarizes them into an HTML table, and sends you a **daily morning email update**.  
-
-It’s designed to run on a schedule (e.g., 7 AM daily) and can be customized for different countries or time zones.
-
----
-
-## Project Layout
-| Path | Description |
-|------|--------------|
-| `scripts/main.py` | Main entry point — runs the full pipeline |
-| `scripts/read_trends.py` | Scraping and data collection logic |
-| `scripts/send_email.py` | Builds HTML content and sends email |
-| `scripts/config.py` | Contains scheduling constants (`SCHEDULED_HR`, `SCHEDULED_MIN`, `TIME_ZONE`) |
-| `requirements.txt` | Project dependencies |
-| `data/` | Runtime data files (`trends_table.csv`, `timestamp.txt`, etc.) |
-| `.gitignore` | Excludes local data files and other sensitive info |
+## Overview
+**WYAS** is an automated tool that delivers daily morning updates on global economic trends by:
+- Collecting recent Google Trends data
+- Analyzing business and finance topics
+- Generating a formatted HTML summary
+- Delivering insights via email at your preferred time
 
 ---
+
+## Project Structure
+```
+wyas/
+├── run_main.bat           # Batch file for Windows Task Scheduler
+├── scripts/
+│   ├── main.py           # Pipeline orchestrator
+│   ├── read_trends.py    # Data collection logic
+│   ├── send_email.py     # Email formatting and delivery
+│   └── constant.py       # Configuration settings
+├── data/                 # Runtime data storage
+├── .env                  # Environment variables
+└── requirements.txt      # Dependencies
+```
+
+## Setup Instructions
+
+### 1. Environment Configuration
+Create a `.env` file in the project root with your email settings:
+```env
+EMAIL_SENDER=your_email@gmail.com
+EMAIL_PASSWORD=your_app_password_here
+EMAIL_RECEIVER=recipient_email@gmail.com
+EMAIL_SUBJECT=Morning Update: U.S. Economic Trends (Past 24 Hours)
+```
+
+### 2. Update Batch File Path
+Edit `run_main.bat` with your project directory:
+```batch
+cd C:\path\to\your\WYAS\directory
+```
+
+### 3. Schedule Daily Updates (Windows)
+1. Open Task Scheduler
+2. Click "Create Basic Task"
+3. Set your preferred schedule (e.g., daily at 7 AM)
+4. Point to your `run_main.bat` file
 
 ## Requirements
-- **Python 3.9+** recommended  
-- See `requirements.txt`
+- Python 3.9+
+- Required packages listed in `requirements.txt`
+
+## Usage
+Once configured, WYAS will automatically:
+- Run at your scheduled time
+- Collect latest economic trends
+- Send formatted updates to specified email(s)
+
+Note: Ensure your computer is powered on at the scheduled time for the task to execute.
