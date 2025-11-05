@@ -6,5 +6,6 @@ REM 1. If Python is not in your PATH, replace 'python' below with your full Pyth
 REM    Example: "C:\Users\YourName\AppData\Local\Programs\Python\Python313\python.exe"
 REM 2. Ensure you have created a .env file with your email credentials (see env.example)
 REM 3. Install required packages: pip install -r requirements.txt
+cd C:\Users\limhy\OneDrive\Documents\GitHub\WYAS
 python scripts\main.py
 pause
