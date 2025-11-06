@@ -2,8 +2,7 @@
 
 ## Overview
 **WYAS** is an automated tool that delivers daily morning updates on global economic trends by:
-- Collecting recent Google Trends data
-- Analyzing business and finance topics
+- Collecting top trending keywords from Google Trends
 - Generating a formatted HTML summary
 - Delivering insights via email at your preferred time
 
@@ -28,9 +27,9 @@ wyas/
 ### 1. Environment Configuration
 Create a `.env` file in the project root with your email settings:
 ```env
-EMAIL_SENDER=your_email@gmail.com
+EMAIL_SENDER=your_email@gmail.com # gmail only
 EMAIL_PASSWORD=your_app_password_here
-EMAIL_RECEIVER=recipient_email@gmail.com
+EMAIL_RECEIVER=recipient_email_1@gmail.com, recipient_email_2@outlook.com
 EMAIL_SUBJECT=Morning Update: U.S. Economic Trends (Past 24 Hours)
 ```
 
