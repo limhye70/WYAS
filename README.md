@@ -11,7 +11,7 @@
 ## Project Structure
 ```
 wyas/
-├── run_main.bat           # Batch file for Windows Task Scheduler
+├── run_main.bat          # Batch file for Windows Task Scheduler
 ├── scripts/
 │   ├── main.py           # Pipeline orchestrator
 │   ├── read_trends.py    # Data collection logic
