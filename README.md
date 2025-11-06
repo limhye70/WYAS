@@ -1,7 +1,7 @@
-# WYAS (While You Are Sleeping) — Global Economy Trends Morning Update
+# WYAS (While You Are Sleeping) — U.S. Economy Trends Morning Update
 
 ## Overview
-**WYAS** is an automated tool that delivers daily morning updates on global economic trends by:
+**WYAS** is an automated tool that delivers daily morning updates on U.S. economic trends by:
 - Collecting top trending keywords from Google Trends
 - Generating a formatted HTML summary
 - Delivering insights via email at your preferred time
