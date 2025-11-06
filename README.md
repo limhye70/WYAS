@@ -39,7 +39,13 @@ Edit `run_main.bat` with your project directory:
 cd C:\path\to\your\WYAS\directory
 ```
 
-### 3. Schedule Daily Updates (Windows)
+### 3. Paackage Installation
+Install required dependencies using pip:
+```bash
+pip install -r requirements.txt
+```
+
+### 4. Schedule Daily Updates (Windows)
 1. Open Task Scheduler
 2. Click "Create Basic Task"
 3. Set your preferred schedule (e.g., daily at 7 AM)
